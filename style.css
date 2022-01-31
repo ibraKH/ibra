@@ -1,10 +1,10 @@
 @font-face {
     font-family: ar;
-    src: url("/fonts/BoutrosJazirahTextLight.ttf");
+    src: url("https://ibrakh.github.io/ibra/fonts/BoutrosJazirahTextLight.ttf");
 }
 @font-face {
     font-family: as;
-    src: url("/fonts/as.ttf");
+    src: url("https://ibrakh.github.io/ibra/fonts/as.ttf");
 }
 @font-face {
     font-family: 'Varela Round', sans-serif;
