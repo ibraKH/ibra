@@ -1,10 +1,10 @@
 @font-face {
     font-family: ar;
-    src: url("https://ibrakh.github.io/ibra/fonts/BoutrosJazirahTextLight.ttf");
+    src: url("https://ibra.ws/fonts/BoutrosJazirahTextLight.ttf");
 }
 @font-face {
     font-family: as;
-    src: url("https://ibrakh.github.io/ibra/fonts/as.ttf");
+    src: url("https://ibra.ws/fonts/as.ttf");
 }
 @font-face {
     font-family: 'Varela Round', sans-serif;
@@ -19,6 +19,46 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
+
+
+    /* media with width */
+
+@media only screen and (max-width: 380px) {
+    #parent{
+        background-color: #5b10be;
+        width: 90%;
+        border-radius: 20px;
+        border-right: solid orange;
+        border-bottom: orange solid;
+        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
+        position: relative;
+    }
+}
+@media only screen and (min-width: 380px) and (max-width: 615px) {
+    #parent{
+        background-color: #5b10be;
+        width: 70%;
+        border-radius: 20px;
+        border-right: solid orange;
+        border-bottom: orange solid;
+        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
+        position: relative;
+    }
+}
+@media only screen and (min-width: 615px) {
+    #parent{
+        background-color: #5b10be;
+        width: 300px;
+        border-radius: 20px;
+        border-right: solid orange;
+        border-bottom: orange solid;
+        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
+        position: relative;
+    }
+}
+
+/*
 @media only screen and (max-width: 375px) {
     #parent{
         background-color: #5b10be;
@@ -116,7 +156,103 @@ body {
         transform: translate(-0%,30%);
     }
 }
+*/
 
+
+    /* media with height */
+
+@media only screen and (max-height: 500px) {
+    #parent{
+        background-color: #5b10be;
+        height: 90%;
+    }
+    #loading , #background{
+        display: none;
+    }
+}
+
+@media only screen and (min-height: 500px) and (max-height : 560px) {
+    #parent{
+        background-color: #5b10be;
+        height: 70%;
+    }
+    #background{
+        display: none;
+    }
+    #loading{
+        position: relative;
+        bottom: 45%;
+        left: 0%;
+        transform: translate(-0%,45%);
+    }
+}
+
+@media only screen and (min-height: 560px) and (max-height: 615px) {
+    #parent{
+        background-color: #5b10be;
+        top: 15%;
+        height: 70%;
+    }
+    #background{
+        width: 250px;
+        height: 200px;
+        z-index: 2;
+        position: absolute;
+        top: 0%;
+    }
+    #loading{
+        position: relative;
+        bottom: 37%;
+        left: 0%;
+        transform: translate(-0%,30%);
+    }
+}
+
+@media only screen and (min-height: 615px) and (max-height: 760px) {
+    #parent{
+        background-color: #5b10be;
+        position: absolute;
+        top: 35%;
+        height: 60%;
+    }
+    #background{
+        width: 250px;
+        height: 250px;
+        z-index: 2;
+        position: absolute;
+        top: 0%;
+    }
+    #loading{
+        position: relative;
+        bottom: 37%;
+        left: 0%;
+        transform: translate(-0%,30%);
+    }
+}
+
+@media only screen and (min-height: 760px) {
+    #parent{
+        background-color: #5b10be;
+        position: absolute;
+        top: 30%;
+        height: 50%;
+    }
+    #background{
+        width: 250px;
+        height: 250px;
+        z-index: 2;
+        position: absolute;
+        top: 4%;
+    }
+    #loading{
+        position: relative;
+        bottom: 30%;
+        left: 0%;
+        transform: translate(-0%,30%);
+    }
+}
+
+/*
 @media only screen and (min-height: 660px) and (max-width: 528px) {
     #parent{
         top: 5%;
@@ -156,6 +292,12 @@ body {
         display: none;
     }
 }
+*/
+
+
+
+
+
 
 
 .container {
@@ -248,9 +390,6 @@ h3 {
     font-weight: normal;
     font-size: 36px;
     line-height: 49px;
-    /* identical to box height */
-
-
     color: #FFFFFF
 }
 .pr{
