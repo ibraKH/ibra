@@ -1,298 +1,2413 @@
-@font-face {
-    font-family: ar;
-    src: url("https://ibra.ws/fonts/BoutrosJazirahTextLight.ttf");
-}
-@font-face {
-    font-family: as;
-    src: url("https://ibra.ws/fonts/as.ttf");
-}
-@font-face {
-    font-family: 'Varela Round', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-}
-@keyframes spin {
-    0%   { transform: rotate(0deg);   }
-    100% { transform: rotate(360deg); }
-}
-body {
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+html, body{
+    margin: 0;
     padding: 0;
-    margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+@keyframes fi{
+    0%{
+        width: 0%;
+        
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes ax{
+    0%{
+        width: 9%;
+        
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes az{
+    0%{
+        width: 20%;
+        
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes sa{
+    0%{
+        width: 0%;
+    }
+    25%{
+        height: 11.8%;
+        width: 2.7%;
+    }
+    50%{
+        height: 21.8%;
+        width: 5.2%;
+    }
+    50%{
+        height: 31.8%;
+        width: 7.7%;
+    }
+    100%{
+        width: 9.9%;
+        height: 41.8%;
+    }
+}
+
+@keyframes shows{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+@keyframes circledPreload {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes circled {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 
 
-    /* media with width */
+@media only screen and (max-width: 700px) {
 
-@media only screen and (max-width: 380px) {
-    #parent{
-        background-color: #5b10be;
-        width: 90%;
-        border-radius: 20px;
-        border-right: solid orange;
-        border-bottom: orange solid;
-        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
-        position: relative;
-    }
-}
-@media only screen and (min-width: 380px) and (max-width: 615px) {
-    #parent{
-        background-color: #5b10be;
-        width: 70%;
-        border-radius: 20px;
-        border-right: solid orange;
-        border-bottom: orange solid;
-        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
-        position: relative;
-    }
-}
-@media only screen and (min-width: 615px) {
-    #parent{
-        background-color: #5b10be;
-        width: 300px;
-        border-radius: 20px;
-        border-right: solid orange;
-        border-bottom: orange solid;
-        box-shadow: 20px 20px 10px 1px rgb(216, 216, 216);
-        position: relative;
-    }
-}
-
-    /* media with height */
-
-@media only screen and (max-height: 500px) {
-    #parent{
-        background-color: #5b10be;
-        height: 90%;
-    }
-    #loading , #background{
-        display: none;
-    }
-}
-
-@media only screen and (min-height: 500px) and (max-height : 560px) {
-    #parent{
-        background-color: #5b10be;
-        height: 70%;
-    }
-    #background{
-        display: none;
-    }
-    #loading{
-        position: relative;
-        bottom: 45%;
-        left: 0%;
-        transform: translate(-0%,45%);
-    }
-}
-
-@media only screen and (min-height: 560px) and (max-height: 615px) {
-    #parent{
-        background-color: #5b10be;
-        top: 15%;
-        height: 70%;
-    }
-    #background{
-        width: 250px;
-        height: 200px;
-        z-index: 2;
-        position: absolute;
-        top: 0%;
-    }
-    #loading{
-        position: relative;
-        bottom: 37%;
-        left: 0%;
-        transform: translate(-0%,30%);
-    }
-}
-
-@media only screen and (min-height: 615px) and (max-height: 760px) {
-    #parent{
-        background-color: #5b10be;
-        position: absolute;
-        top: 35%;
-        height: 60%;
-    }
-    #background{
-        width: 250px;
-        height: 250px;
-        z-index: 2;
-        position: absolute;
-        top: 0%;
-    }
-    #loading{
-        position: relative;
-        bottom: 37%;
-        left: 0%;
-        transform: translate(-0%,30%);
-    }
-}
-
-@media only screen and (min-height: 760px) {
-    #parent{
-        background-color: #5b10be;
-        position: absolute;
-        top: 30%;
-        height: 50%;
-    }
-    #background{
-        width: 250px;
-        height: 250px;
-        z-index: 2;
-        position: absolute;
-        top: 4%;
-    }
-    #loading{
-        position: relative;
-        bottom: 30%;
-        left: 0%;
-        transform: translate(-0%,30%);
-    }
-}
-
-.container {
-    height: 100px;
-    width: 100px;
-    margin: 150px auto;
+#parent{
     position: relative;
+    height: 2381px;
+    width: 100%;
+    overflow-x: hidden;
 }
-.container, .it {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bigscreen{
+    display: none;
 }
-.it {
+#front{
+    position: relative;
+    width: 100%;
+    height: 663px;
+}
+#frontHeader{
+    position: relative;
+    height: 128px;
+    width: 100%;
+}
+.topVector{
+    width: 100%;
+    height: 100%;
+}
+.circleLoop{
+    position: absolute;
+    width: 33px;
+    height: 32px;
     border-radius: 50%;
+    left: 5px;
+    top: 5px;
+}
+#welcoming{
+    position: relative;
+    height: 138px;
+    width: 100%;
+}
+.welcomingChildren{
+    position: relative;
+    margin-left: 18px;
+}
+.shortAboutText{
+    margin: -40px 0 0 40px;
+    color: aqua;
+}
+.hi{
+    color: #FF5C00;
+}
+#info{
+    position: relative;
+    width: 100%;
+    height: 198px;
+}
+#infoBackground{
     position: absolute;
+    top: -35px;
+    width: 100%;
+    height: 129px;
+    z-index: 0;
 }
-.item1 {
-    height: 90%;
-    width: 90%;
-    box-shadow: 2px 2px 5px white;
-    animation: spin 2s linear infinite;
+.infoBackgroundVector{
+    width: 100%;
+    height: 100%;
 }
-.item2 {
-    height: 80%;
-    width: 80%;
-    box-shadow: -2px 2px 5px rgb(197, 160, 221);
-    animation: spin 1s linear infinite reverse;
+#infoCards{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 28px;
+    grid-row-gap: 0px;
 }
-.item3 {
-    height: 70%;
-    width: 70%;
-    box-shadow: 2px -2px 5px white;
-    animation: spin 4s linear infinite;
+#contact{
+    grid-area: 1 / 1 / 2 / 2;
 }
-
-#main{
-    height: 100vh;
-    background-color: white;
+#idea{
+    grid-area: 1 / 2 / 2 / 3;
+}
+#created{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.infoCard{
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    height: 104px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+}
+.infoIcons{
+    position: absolute;
+    width: 100%;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContent{
+    margin-top: 20px;
+    height: 78%;
+    font-size: 10px;
+    color: #0E0E0E;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-#working{
-    width: 100%;
-    height: 20%;
-    position: relative;
-}
-#workingDiv{
-    left: 10%;
-    width: 80%;
-    height: 100%;
+.infoButtonsDiv{
     position: absolute;
-}
-
-#contentDiv {
     width: 100%;
-    height: 50px;
-    margin: 50px 0;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 28px;
-    position: relative;
-}
-
-#contentDiv:after {
-    content: '';
-    width: 100%;
-    border-bottom: solid 1px #fff;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    z-index: 1;
-}
-h3 {
-    background-color: #5b10be;
-    width: auto;
-    display: inline-block;
-    z-index: 3;
-    padding: 0 20px 0 20px;
-    color: white;
-    position: relative;
-    font-family: ar;
-    font-weight: lighter;
-    margin: 0;
-}
-.ibra{
-    font-family: 'Handlee', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 49px;
-    color: #FFFFFF
-}
-.pr{
-    font-family: as;
-    color: white;
-}
-.cfont{
-    margin: 0;
-}
-#social{
-    bottom: 5px;
-    position: absolute;
-    width: 20%;
-    height: 22px;
-    left: 40%;
-    background-color: white;
-    border-radius: 20px;
-}
-.icons{
-    position: absolute;
-    margin-top: 2px;
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    left: 50%;
-    transform: translate(-50%,0%);
-}
-#social #githubW {
-    display: none;  
-}
-#social:hover{
-    background-color: #5b10be;
-    border: solid white 1px;
-}
-#social:hover #githubW {
-    display: block;
-}
-#social:hover img:first-child {
-    display: none;  
-}
-.backgroundImages{
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-#ast{
+    bottom: 0;
     z-index: 2;
 }
-.para{
-    margin-top: 5px;
-    font-family: ar;
+.infoButtons{
+    width: 33px;
+    height: 6px;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+}
+.infoButtons::after{
+    content: "CONTACT";
+    position: absolute;
+    margin: -2px 0 0 -12.5px;
+    font-weight: normal;
+    font-size: 9px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #FFFFFF;
+    z-index: 2;
+}
+.infoVectors{
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    z-index: 1;
+    height: 20px;
+}
+.ideaVector{
+    position: absolute;
+    width: 100%;
+    height: 34.81px;
+    bottom: -2px;
+    z-index: 1;
+    height: 20px;
+}
+#show{
+    position: relative;
+    width: 100%;
+    height: 199px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#showImage{
+    position: absolute;
+    width: 80%;
+    height: 70px;
+    left: 10%;
+    top: 30%;
+    border-radius: 20px;
+    background-image: url("/images/sdf.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+.showVector{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    height: 88px;
+}
+.ideaIconLabel{
+    top: -50px;
+}
+.createdIconLabel{
+    top: -46px;
+}
+
+
+
+ /* major */ 
+#major{
+    position: relative;
+    width: 100%;
+    height: 517px;
+}
+
+#leftCircle{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(315.5deg, #00D1FF 15.01%, #7000FF 79.48%);
+    border-radius: 50%;
+    left: -40%;
+}
+#rightCircle{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(180deg, #FF0000 2.05%, #FF5C00 100%);
+    border-radius: 50%;
+    top: 17%;
+    right: -40%;
+}
+#majorLine{
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    height: 120px;
+    bottom: 5px;
+}
+#firstLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 10%;
+    height: 2px;
+}
+#curvedFirstLine{
+    position: absolute;
+    left: 79.98%;
+    top: 10%;
+    width: 9.9%;
+    border-radius: 0 100px 100px 0;
+    height: 41.8%;
+}
+#curvedFirstLineInside{
+    position: absolute;
+    left: 78.2%;
+    top: 11.8%;
+    width: 11%;
+    border-radius: 0 100px 100px 0;
+    height: 38.2%;
+    z-index: 1;
+}
+#secendLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 50%;
+    height: 2px;
+}
+#curvedSecendLine{
+    position: absolute;
+    right: 80%;
+    top: 50%;
+    width: 11%;
+    border-radius: 100px 0 0 100px;
+    height: 41.8%;
+}
+#curvedSecendLineInside{
+    position: absolute;
+    right: 79.5%;
+    top: 51.7%;
+    width: 10.9%;
+    border-radius: 100px 0 0 100px;
+    height: 38.5%;
+}
+#lastLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 90%;
+    height: 2px;
+}
+.point{
+    position: absolute;
+    width: 12px;
+    height: 11px;
+    border-radius: 50%;
+}
+#firstPoint{
+    top: 6%;
+    left: 19%;
+    background-color: #00D1FF;
+}
+
+#firstPoint::after{
+    content: "Born";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: 10px;
+    left: -6px;
+}
+#firstPoint::before{
+    content: "2000";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -10px;
+}
+#secendPoint{
+    top: 6%;
+    left: 39%;
+}
+#secendPoint::after{
+    content: "High school";
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: small;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+#secendPoint::before{
+    content: "2018";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -10px;
+}
+#thirdPoint{
+    top: 6%;
+    left: 59%;
+}
+#thirdPoint::after{
+    content: "Studying EN aboard";
+    text-align: center;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -18px;
+}
+#thirdPoint::before{
+    content: "2019";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -8px;
+}
+#fourthPoint{
+    top: 46%;
+    left: 71%;
+}
+#fourthPoint::after{
+    content: "Start Coding";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#fourthPoint::before{
+    content: "2020 - ♾";
+    position: absolute;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: -15px;
+    left: -10.5px;
+}
+#fifthPoint{
+    top: 46%;
+    left: 51%;
+}
+#fifthPoint::after{
+    content: "College";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#fifthPoint::before{
+    content: "2018 - 2023";
+    position: absolute;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: -13px;
+    left: -18.5px;
+}
+#sixthPoint{
+    top: 46%;
+    left: 31%;
+}
+#sixthPoint::after{
+    content: "Senior developer";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#sixthPoint::before{
+    content: "Soon";
+    position: absolute;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -15px;
+    left: -6px;
+}
+#seventhPoint{
+    top: 86%;
+    left: 41%;
+}
+#seventhPoint::after{
+    content: "WHO KNOWS";
+    text-align: center;
+    font-size: small;
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#seventhPoint::before{
+    content: "-";
+    position: absolute;
+    top: -20px;
+    left: 3px;
+}
+.roadFirstLine{
+    position: absolute;
+    top: 10%;
+    height: 2px;
+}
+#oneToTwo{
+    left: 20%;
+}
+#twoToThree{
+    left: 40%;
+}
+.pointsColored{
+    background-color: #00D1FF;
+}
+.pointsColoredOrange{
+    background-color: #FF5C00;
+}
+.colored{
+    background-color: #00D1FF;
+    animation: fi 1.27s;
+    animation-fill-mode: forwards;
+}
+#threeToFourTop{
+    position: absolute;
+    top: 10%;
+    height: 2px;
+    width: 20%;
+    left: 60%;
+}
+#threeToFourBottom{
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 9%;
+    left: 71%;
+    background-color: #00D1FF;
+}
+#threeToFourBottomB{
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 9%;
+    left: 71%;
+    transform: scaleX(-1);
+}
+.curveRightBottom{
+    animation: ax 2s;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+#threeToFourInside{
+    position: absolute;
+    left: 79.98%;
+    top: 10%;
+    border-radius: 0 100px 100px 0;
+    z-index: 0;
+}
+.rightCurve{
+    background-color: #00D1FF;
+    animation: sa 1s;
+    animation-fill-mode: forwards;
+}
+#fourToFive{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 52%;
+    height: 2px;
+    background-color: #FF5C00;
+}
+#fiveToSix{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 32%;
+    height: 2px;
+    background: linear-gradient(270deg, #FF5C00 0%, rgba(196, 196, 196, 0) 55.38%);
+}
+#fourToFiveTop{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 52%;
+    height: 2px;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+#fiveToSixTop{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 32%;
+    height: 2px;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+.senedLinesR{
+    animation: az 1.5s;
+    animation-fill-mode: forwards;
+}
+.hide{
+    display: none;
+}
+ /* coding */
+#coding{
+    position: relative;
+    width: 100%;
+    height: 546px;
+}
+#codingHeader{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+#majorVector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.majorVector{
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 65.63px;
+}
+#firstWhiteBreak{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 9px;
+    z-index: 2;
+}
+#fullstackLabel{
+    width: 100%;
+    height: 446px;
+}
+#frontend{
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+#frontendLeft{
+    position: absolute;
+    width: 40%;
+    height: 159.63px;
+    left: 5%;
+    bottom: 5px;
+    background: linear-gradient(131.15deg, #00D1FF 0%, #FF5C00 100%);
+    border-radius: 5px;
+}
+.frontendCards{
+    position: relative;
+    width: 100%;
+    height: 33.3%;
+}
+#jsPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#jsPrecent::before{
+    content: "85%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#jsPrecent::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #F7DF1E;
+}
+.frontIcons{
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    transform: translate(25%, -50%);
+}
+#htmlPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#htmlPrecent::after{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #E44D26;
+}
+#htmlPrecent::before{
+    content: "90%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#cssPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#cssPrecent::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #379AD6;
+}
+#cssPrecent::before{
+    content: "85%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#frontendVector{
+    position: absolute;
+    right: -5px;
+    top: -2px;
+    height: 100%;
+}
+#frontendRight{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    right: 10px;
+    bottom: 5px;
+    text-align: center;
+    margin: 0;
+}
+#frontendContent{
+    text-align: left;
+    margin-top: -15px;
+    font-size: small;
+}
+#frontendMoreLogos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -10px;
+}
+.vueLogo{
+    position: absolute;
+    margin-top: 3.5px;
+    margin-left: 1px;
+}
+
+
+#backend{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+#backendLeft{
+    position: absolute;
+    width: 40%;
+    height: 159.63px;
+    right: 5%;
+    top: 35px;
+    background: linear-gradient(218.93deg, #8000FF 2.31%, #00D1FF 83.45%);
+    border-radius: 5px;
+}
+.backendCards{
+    position: relative;
+    width: 100%;
+    height: 33.3%;
+}
+#nodejsPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#nodejsPrecent::before{
+    content: "70%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#nodejsPrecent::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    right: 0;
+    border-radius: 5px;
+    background-color: #83CD29;
+}
+.backendIcons{
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    right: 0%;
+    margin-right: 25px;
+    transform: translate(0%, -50%);
+}
+#firebasePrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#firebasePrecent::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    right: 0;
+    background-color: #FFCC01;
+}
+#firebasePrecent::before{
+    content: "40%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#mongodbPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#mongodbPrecent::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    right: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #412F1F;
+}
+#mongodbPrecent::before{
+    content: "40%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#backendVector{
+    position: absolute;
+    left: -5px;
+    top: -2px;
+    height: 100%;
+}
+#backendRight{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    left: 10px;
+    top: 5px;
+    text-align: center;
+    margin: 0;
+}
+#backendContent{
+    text-align: left;
+    margin-top: -15px;
+    font-size: small;
+}
+#backendMoreLogos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -10px;
+}
+
+
+
+ /* projects */
+#projects{
+    position: relative;
+    width: 100%;
+    height: 503px;
+}
+#projectsHeader{
+    position: relative;
+    width: 100%;
+    height: 111px;
+}
+.projectsVector{
+    width: 100%;
+    height: 102px;
+}
+#projectsWhiteBreak{
+    position: absolute;
+    width: 100%;
+    height: 9px;
+    z-index: 2;
+}
+#projectsIll{
+    position: relative;
+    width: 100%;
+    height: 178px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#projectsIllustration{
+    width: 100%;
+    position: relative;
+}
+.projectsill{
+    position: relative;
+    margin-top: -100px;
+}
+#projectsCards{
+    position: relative;
+    width: 100%;
+    height: 199px;
+}
+#cardsBottom{
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    bottom: 0;
+}
+#projectsCardsContainer{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projectsCard{
+    position: relative;
+    width: 30%;
+    height: 131px;
+    margin-top: 45px;
+    border-radius: 20px;
+    background-color: green;
+    justify-content: center;
+    text-align: center;
+}
+.projectsButtons{
+    position: absolute;
+    width: 20px;
+    height: 6px;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.projectsButtons::after{
+    content: "SHOW";
+    position: absolute;
+    margin: -2px 0 0 -12.5px;
+    right: -2px;
+    font-weight: normal;
+    font-size: 9px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    z-index: 2;
+}
+.projectsImages{
+    margin-top: -40px;
+}
+#telegramBotLogo{
+    margin-top: -25px;
+}
+.projectsContent{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    top: 20px;
+    font-size: small;
+}
+#raceApp{
+    background: linear-gradient(180deg, #6E30E7 0%, rgba(196, 196, 196, 0) 100%);
+}
+#quizareaApp{
+    background: linear-gradient(180deg, #EF3E34 0%, rgba(196, 196, 196, 0) 100%);
+}
+#telegramBot{
+    background: linear-gradient(180deg, #30A7DE 0%, rgba(196, 196, 196, 0) 100%);
+}
+ /* footer */
+#footer{
+    height: 152px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.footerVector{
+    position: absolute;
+    height: 79px;
+    width: 100%;
+    bottom: 0;
+}
+#copyright{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+#copyright h6{
+    font-size: xx-small;
+    color: #a0a0a07c;
+    margin: 5px;
+}
+#socialIconsDiv{
+    position: absolute;
+    width: 83px;
+    height: 20px;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%,0);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.socailIconsCards{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    border-radius: 5px;
+}
+#githubIconImage{
+    width: 15px;
+    height: 14px;
+    margin-top: 4.5px;
+}
+#telegramImage{
+    width: 15px;
+    height: 14px;
+    margin-top: 4px;
+}
+#twitterImage{
+    width: 13px;
+    height: 11px;
+    margin-top: 4.5px;
+}
+#preload{
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.spanen{
+    display: inline-block;
+    position: absolute;
+    text-transform: uppercase;
+    top: -80px;
+    transform-origin: 0 80px;
+}
+#showDivPreload{
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%,-35%);
+}
+#showTextPreload{
+    position: absolute;
     color: white;
-    font-size: larger;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+    animation: circledPreload 6.5s linear infinite;
+}
+#showDiv{
+    position: absolute;
+    left: 50%;
+    top: 36.8%;
+    transform: translate(-50%,-30%);
+    z-index: 2;
+}
+#showText{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+    animation: circled 6.5s linear infinite;
+}
+#s{
+    top: 35%;
+    transform: translate(0%,-35%);
+    background-color: black;
+    position: absolute;
+    font-size: 72px;
+    font-family: 'Redressed', cursive;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+#s::before{
+    content: "IBRA";
+    background: linear-gradient(to right, #7000FF, #00D1FF);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    animation: shows 3s linear infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+#d{
+    top: 40%;
+    left: 55%;
+    transform: translate(-55%,-40%);
+    background-color: black;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Redressed', cursive;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+#d::before{
+    content: "PORTFOLIO.";
+    background: linear-gradient(to right, #FF0000, #FF5C00);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    animation: shows 3s linear infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+#textContaier{
+    position: absolute;
+    left: 20px;
+    top: 15%;
+    width: 30%;
+}
+}
+@media only screen and (min-width: 700px) {
+    
+#parent{
+    position: relative;
+    height: 2750px;
+    width: 100%;
+    overflow-x: hidden;
+}
+#watchScreen{
+    position: absolute;
+    right: 0;
+    top: 950px;
+    width: 50%;
+    height: 1800px;
+    z-index: 1;
+    background-image: url("/images/el.gif");
+    background-size: cover;
+}
+#front{
+    position: relative;
+    width: 100%;
+    height: 1050px;
+}
+#frontHeader{
+    position: relative;
+    height: 128px;
+    width: 100%;
+}
+.topVector{
+    width: 100%;
+    height: 180px;
+}
+.circleLoop{
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    border-radius: 50%;
+    left: 5px;
+    top: 5px;
+}
+#welcoming{
+    position: relative;
+    height: 138px;
+    width: 100%;
+    left: 10%;
+}
+.welcomingChildren{
+    position: relative;
+    margin-left: 18px;
+}
+.shortAboutText{
+    margin: -40px 0 0 40px;
+    color: aqua;
+}
+.hi{
+    color: #FF5C00;
+}
+#info{
+    position: absolute;
+    width: 700px;
+    height: 241px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#infoBackground{
+    position: absolute;
+    top: -35px;
+    width: 2000px;
+    height: 129px;
+    z-index: 0;
+    left: -100%;
+}
+.infoBackgroundVector{
+    width: 100%;
+    height: 100%;
+}
+#infoCards{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 28px;
+    grid-row-gap: 0px;
+}
+#contact{
+    grid-area: 1 / 1 / 2 / 2;
+}
+#idea{
+    grid-area: 1 / 2 / 2 / 3;
+}
+#created{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.infoCard{
+    position: relative;
+    width: 200px;
+    border-radius: 20px;
+    height: 150px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+}
+.infoIcons{
+    position: absolute;
+    width: 200%;
+    top: -40px;
+    left: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContent{
+    margin-top: 20px;
+    height: 78%;
+    font-size: 20px;
+    color: #0E0E0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.infoButtonsDiv{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    z-index: 2;
+}
+.infoButtons{
+    width: 33px;
+    height: 6px;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+}
+.infoButtons::after{
+    content: "CONTACT";
+    position: absolute;
+    margin: -2px 0 0 -12.5px;
+    font-weight: normal;
+    font-size: 9px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #FFFFFF;
+    z-index: 2;
+}
+.infoVectors{
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    z-index: 1;
+    height: 20px;
+}
+.ideaVector{
+    position: absolute;
+    width: 100%;
+    height: 34.81px;
+    bottom: -2px;
+    z-index: 1;
+    height: 20px;
+}
+#show{
+    position: absolute;
+    width: 100%;
+    height: 199px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+}
+#showImage{
+    position: absolute;
+    width: 80%;
+    height: 70px;
+    left: 10%;
+    top: 30%;
+    border-radius: 20px;
+    background-image: url("/images/sdf.jpg");
+    background-size: cover;
+    z-index: 3;
+}
+.showVector{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    height: 88px;
+    z-index: 2;
+}
+.ideaIconLabel{
+    top: -50px;
+}
+.createdIconLabel{
+    top: -46px;
+}
+
+
+
+ /* major */ 
+#major{
+    position: relative;
+    width: 50%;
+    height: 517px;
+}
+
+#leftCircle{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(315.5deg, #00D1FF 15.01%, #7000FF 79.48%);
+    border-radius: 50%;
+    left: -40%;
+}
+#rightCircle{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(180deg, #FF0000 2.05%, #FF5C00 100%);
+    border-radius: 50%;
+    top: 17%;
+    right: -40%;
+}
+#majorLine{
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    height: 120px;
+    bottom: 5px;
+}
+#firstLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 10%;
+    height: 2px;
+}
+#curvedFirstLine{
+    position: absolute;
+    left: 79.98%;
+    top: 10%;
+    width: 9.9%;
+    border-radius: 0 100px 100px 0;
+    height: 41.8%;
+}
+#curvedFirstLineInside{
+    position: absolute;
+    left: 78.2%;
+    top: 11.8%;
+    width: 11%;
+    border-radius: 0 100px 100px 0;
+    height: 38.2%;
+    z-index: 1;
+}
+#secendLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 50%;
+    height: 2px;
+}
+#curvedSecendLine{
+    position: absolute;
+    right: 80%;
+    top: 50%;
+    width: 11%;
+    border-radius: 100px 0 0 100px;
+    height: 41.8%;
+}
+#curvedSecendLineInside{
+    position: absolute;
+    right: 79.5%;
+    top: 51.7%;
+    width: 10.9%;
+    border-radius: 100px 0 0 100px;
+    height: 38.5%;
+}
+#lastLine{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 90%;
+    height: 2px;
+}
+.point{
+    position: absolute;
+    width: 12px;
+    height: 11px;
+    border-radius: 50%;
+}
+#firstPoint{
+    top: 6%;
+    left: 19%;
+    background-color: #00D1FF;
+}
+#firstPoint::after{
+    content: "Born";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: 10px;
+    left: -6px;
+}
+#firstPoint::before{
+    content: "2000";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -10px;
+}
+#secendPoint{
+    top: 6%;
+    left: 39%;
+}
+#secendPoint::after{
+    content: "High school";
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: -13px;
+}
+#secendPoint::before{
+    content: "2018";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -10px;
+}
+#thirdPoint{
+    top: 6%;
+    left: 59%;
+}
+#thirdPoint::after{
+    content: "Studying EN aboard";
+    text-align: center;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -18px;
+}
+#thirdPoint::before{
+    content: "2019";
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -20px;
+    left: -8px;
+}
+#fourthPoint{
+    top: 46%;
+    left: 71%;
+}
+#fourthPoint::after{
+    content: "Start Coding";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#fourthPoint::before{
+    content: "2020 - ♾";
+    position: absolute;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: -15px;
+    left: -10.5px;
+}
+#fifthPoint{
+    top: 46%;
+    left: 51%;
+}
+#fifthPoint::after{
+    content: "College";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#fifthPoint::before{
+    content: "2018 - 2023";
+    position: absolute;
+    font-size: x-small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: -13px;
+    left: -18.5px;
+}
+#sixthPoint{
+    top: 46%;
+    left: 31%;
+}
+#sixthPoint::after{
+    content: "Senior developer";
+    text-align: center;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: absolute;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#sixthPoint::before{
+    content: "Soon";
+    position: absolute;
+    font-size: small;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    top: -15px;
+    left: -6px;
+}
+#seventhPoint{
+    top: 86%;
+    left: 41%;
+}
+#seventhPoint::after{
+    content: "WHO KNOWS";
+    text-align: center;
+    font-size: small;
+    position: absolute;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 50px;
+    top: 12px;
+    left: -19px;
+}
+#seventhPoint::before{
+    content: "-";
+    position: absolute;
+    top: -20px;
+    left: 3px;
+}
+.roadFirstLine{
+    position: absolute;
+    top: 10%;
+    height: 2px;
+}
+#oneToTwo{
+    left: 20%;
+}
+#twoToThree{
+    left: 40%;
+}
+.pointsColored{
+    background-color: #00D1FF;
+}
+.pointsColoredOrange{
+    background-color: #FF5C00;
+}
+.colored{
+    background-color: #00D1FF;
+    animation: fi 1.27s;
+    animation-fill-mode: forwards;
+}
+#threeToFourTop{
+    position: absolute;
+    top: 10%;
+    height: 2px;
+    width: 20%;
+    left: 60%;
+}
+#threeToFourBottom{
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 9%;
+    left: 71%;
+    background-color: #00D1FF;
+}
+#threeToFourBottomB{
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 9%;
+    left: 71%;
+    transform: scaleX(-1);
+}
+.curveRightBottom{
+    animation: ax 2s;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+#threeToFourInside{
+    position: absolute;
+    left: 79.98%;
+    top: 10%;
+    border-radius: 0 100px 100px 0;
+    z-index: 0;
+}
+.rightCurve{
+    background-color: #00D1FF;
+    animation: sa 1s;
+    animation-fill-mode: forwards;
+}
+#fourToFive{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 52%;
+    height: 2px;
+    background-color: #FF5C00;
+}
+#fiveToSix{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 32%;
+    height: 2px;
+    background: linear-gradient(270deg, #FF5C00 0%, rgba(196, 196, 196, 0) 55.38%);
+}
+#fourToFiveTop{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 52%;
+    height: 2px;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+#fiveToSixTop{
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    left: 32%;
+    height: 2px;
+    transform: scaleX(-1);
+    z-index: 0;
+}
+.senedLinesR{
+    animation: az 1.5s;
+    animation-fill-mode: forwards;
+}
+.hide{
+    display: none;
+}
+ /* coding */
+#coding{
+    position: relative;
+    width: 50%;
+    height: 546px;
+}
+#codingHeader{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+#majorVector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.majorVector{
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 65.63px;
+}
+#firstWhiteBreak{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 9px;
+    z-index: 2;
+}
+#fullstackLabel{
+    width: 100%;
+    height: 446px;
+}
+#frontend{
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+#frontendLeft{
+    position: absolute;
+    width: 40%;
+    height: 159.63px;
+    left: 5%;
+    bottom: 5px;
+    background: linear-gradient(131.15deg, #00D1FF 0%, #FF5C00 100%);
+    border-radius: 5px;
+}
+.frontendCards{
+    position: relative;
+    width: 100%;
+    height: 33.3%;
+}
+#jsPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#jsPrecent::before{
+    content: "85%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#jsPrecent::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #F7DF1E;
+}
+.frontIcons{
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    transform: translate(25%, -50%);
+}
+#htmlPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#htmlPrecent::after{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #E44D26;
+}
+#htmlPrecent::before{
+    content: "90%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#cssPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    right: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#cssPrecent::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #379AD6;
+}
+#cssPrecent::before{
+    content: "85%";
+    position: absolute;
+    right: -35px;
+    top: -6px;
+}
+#frontendVector{
+    position: absolute;
+    right: -5px;
+    top: -2px;
+    height: 100%;
+}
+#frontendRight{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    right: 10px;
+    bottom: 5px;
+    text-align: center;
+    margin: 0;
+}
+#frontendContent{
+    text-align: left;
+    margin-top: -15px;
+    font-size: small;
+}
+#frontendMoreLogos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -10px;
+}
+.vueLogo{
+    position: absolute;
+    margin-top: 3.5px;
+    margin-left: 1px;
+}
+
+
+#backend{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+#backendLeft{
+    position: absolute;
+    width: 40%;
+    height: 159.63px;
+    right: 5%;
+    top: 35px;
+    background: linear-gradient(218.93deg, #8000FF 2.31%, #00D1FF 83.45%);
+    border-radius: 5px;
+}
+.backendCards{
+    position: relative;
+    width: 100%;
+    height: 33.3%;
+}
+#nodejsPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#nodejsPrecent::before{
+    content: "70%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#nodejsPrecent::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    right: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #83CD29;
+}
+.backendIcons{
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    right: 0%;
+    margin-right: 25px;
+    transform: translate(0%, -50%);
+}
+#firebasePrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#firebasePrecent::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    border-radius: 5px;
+    background-color: #FFCC01;
+}
+#firebasePrecent::before{
+    content: "40%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#mongodbPrecent{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    height: 7.42px;
+    left: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    z-index: 1;
+}
+#mongodbPrecent::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    border-radius: 5px;
+    background-color: #412F1F;
+}
+#mongodbPrecent::before{
+    content: "40%";
+    position: absolute;
+    left: -35px;
+    top: -6px;
+}
+#backendVector{
+    position: absolute;
+    left: -5px;
+    top: -2px;
+    height: 100%;
+}
+#backendRight{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    left: 10px;
+    top: 5px;
+    text-align: center;
+    margin: 0;
+}
+#backendContent{
+    text-align: left;
+    margin-top: -15px;
+    font-size: small;
+}
+#backendMoreLogos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -10px;
+}
+
+
+
+ /* projects */
+#projects{
+    position: relative;
+    width: 50%;
+    height: 503px;
+}
+#projectsHeader{
+    position: relative;
+    width: 100%;
+    height: 111px;
+}
+.projectsVector{
+    width: 100%;
+    height: 102px;
+}
+#projectsWhiteBreak{
+    position: absolute;
+    width: 100%;
+    height: 9px;
+    z-index: 2;
+}
+#projectsIll{
+    position: relative;
+    width: 100%;
+    height: 178px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#projectsIllustration{
+    width: 100%;
+    position: relative;
+}
+.projectsill{
+    position: relative;
+    margin-top: -100px;
+}
+#projectsCards{
+    position: relative;
+    width: 100%;
+    height: 199px;
+}
+#cardsBottom{
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    bottom: 0;
+}
+#projectsCardsContainer{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projectsCard{
+    position: relative;
+    width: 30%;
+    height: 131px;
+    margin-top: 45px;
+    border-radius: 20px;
+    background-color: green;
+    justify-content: center;
+    text-align: center;
+}
+.projectsButtons{
+    position: absolute;
+    width: 20px;
+    height: 6px;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.projectsButtons::after{
+    content: "SHOW";
+    position: absolute;
+    margin: -2px 0 0 -12.5px;
+    right: -2px;
+    font-weight: normal;
+    font-size: 9px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    z-index: 2;
+}
+.projectsImages{
+    margin-top: -40px;
+}
+#telegramBotLogo{
+    margin-top: -25px;
+}
+.projectsContent{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    top: 20px;
+    font-size: small;
+}
+#raceApp{
+    background: linear-gradient(180deg, #6E30E7 0%, rgba(196, 196, 196, 0) 100%);
+}
+#quizareaApp{
+    background: linear-gradient(180deg, #EF3E34 0%, rgba(196, 196, 196, 0) 100%);
+}
+#telegramBot{
+    background: linear-gradient(180deg, #30A7DE 0%, rgba(196, 196, 196, 0) 100%);
+}
+ /* footer */
+#footer{
+    height: 152px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+}
+.footerVector{
+    position: absolute;
+    height: 79px;
+    width: 100%;
+    bottom: 0;
+}
+#copyright{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+#copyright h6{
+    font-size: xx-small;
+    color: #a0a0a07c;
+    margin: 5px;
+}
+#socialIconsDiv{
+    position: absolute;
+    width: 83px;
+    height: 20px;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%,0);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.socailIconsCards{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    border-radius: 5px;
+}
+#githubIconImage{
+    width: 15px;
+    height: 14px;
+    margin-top: 4.5px;
+}
+#telegramImage{
+    width: 15px;
+    height: 14px;
+    margin-top: 4px;
+}
+#twitterImage{
+    width: 13px;
+    height: 11px;
+    margin-top: 4.5px;
+}
+#preload{
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.spanen{
+    display: inline-block;
+    position: absolute;
+    text-transform: uppercase;
+    top: -80px;
+    transform-origin: 0 80px;
+}
+#showDivPreload{
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%,-35%);
+}
+#showTextPreload{
+    position: absolute;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+    animation: circledPreload 6.5s linear infinite;
+}
+#showDiv{
+    position: absolute;
+    left: 50%;
+    top: 36.8%;
+    transform: translate(-50%,-30%);
+    z-index: 4;
+}
+#showText{
+    position: absolute;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+    animation: circled 6.5s linear infinite;
+    z-index: 4;
+}
+#s{
+    top: 35%;
+    transform: translate(0%,-35%);
+    background-color: black;
+    position: absolute;
+    font-size: 72px;
+    font-family: 'Redressed', cursive;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+#s::before{
+    content: "IBRA";
+    background: linear-gradient(to right, #7000FF, #00D1FF);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    animation: shows 3s linear infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+#d{
+    top: 40%;
+    left: 55%;
+    transform: translate(-55%,-40%);
+    background-color: black;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Redressed', cursive;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+#d::before{
+    content: "PORTFOLIO.";
+    background: linear-gradient(to right, #FF0000, #FF5C00);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    animation: shows 3s linear infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+#textContaier{
+    position: absolute;
+    left: 20px;
+    top: 15%;
+    width: 30%;
+}
+button, a{
+    cursor: pointer;
+}
+}
+.emailIcon{
+    width: 102px;
+    height: 72px;
+}
+.ideaIcon{
+    width: 119px;
+    height: 91px;
+}
+.attentionIcon{
+    width: 100px;
+    height: 100px;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+.jsIcon, .htmlIcon, .cssIcon, .nodejsIcon, .firebaseIcon, .mongodbIcon{
+   width: 50px;
+   height: 50px;
+}
+.jsIcon{
+    height: 45px;
+}
+.racePng{
+    width: 85px;
+    height: 100px;
+}
+.quizareaPng{
+    width: 70px;
+    height: 70px;
+}
+.telegramBotPng{
+    width: 55px;
+    height: 55px;
+}
+.racePng{
+    margin-top: -49px;
+}
+.Typewriter__wrapper{
+    color: #E44D26;
+    font-size: 25px;
+    font-family: 'Redressed', cursive;
+}
+.Typewriter__cursor{
+    color: #00D1FF;
+}
+.quote{
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-style: italic;
+    color: white;
+}
+.aboutMeFont{
+    font-family: 'Changa', sans-serif;
+}
+.frontFont{
+    font-family: 'Comfortaa', cursive;
+}
+.headerCodingFont{
+    font-family: 'El Messiri', sans-serif;
+}
+.codingContentFont{
+    font-family: 'Comfortaa', cursive;
+}
+.smallerFont{
+    font-size: x-small;
+}
+.projectsTitleFont{
+    font-family: 'El Messiri', sans-serif;
+}
+.projectsFont{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+.darkThemeBackground{
+    background: #0E0E0E;
+}
+.lightThemeBackground{
+    background-color: white;
+}
+.darkThemeFont{
+    color: white;
+}
+.lightThemeFont{
+    color: black;
+}
+.lineDarkTheme{
+    background-color: white;
+}
+.lineLightTheme{
+    background-color: #898989;
+}
+.lineDarkThemeInside{
+    background-color: #0E0E0E;
+}
+.lineLightThemeInside{
+    background-color: white;
+}
+.graphText{
+    position: absolute;
+    color: #5e5e5e;
+    font-family: 'Comfortaa', cursive;
+    font-size: x-small;
+    margin: 0;
+    bottom: 2px;
 }

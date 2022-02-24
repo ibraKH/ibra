@@ -3,49 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0E0E0E">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://ibra.ws/images/favicon.png" type="image/x-icon">
-    <title>ibra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Comfortaa:wght@300&family=Cormorant+Garamond:wght@300&family=El+Messiri&family=Redressed&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <meta name="description" content="ibra portfolio, display skills and coding tech used and more , made by ibra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="/images/ibra.png">
+    <title>ibra portfolio</title>
 </head>
-<body> 
-    <div id="main">
-        <div id="background">
-            <img src="https://ibra.ws/images/ast.png" class="backgroundImages" id="ast">
-            <img src="https://ibra.ws/images/stars.png" class="backgroundImages" id="stars">
+<body>
+    <div id="preload" class="show">
+        <h1 id="s" class="darkThemeFont">IBRA</h1>
+        <h5 id="d">PORTFOLIO..</h5>
+        <div id="showDivPreload">
+            <h3 id="showTextPreload">HEY-WELCOME-WAIT-TO-LOAD-</h3>
         </div>
-        <div id="parent">
-            <div class="header">
-                <h1 class="cfont ibra">I B R A</h1>
-                <h4 class="cfont pr">PORTFOLIO</h4>
-                <p class="cfont para"> الموقع الشخصي الذي يعرض جميع المعلومات و الأنجازات الخاصة بي</p>
+    </div>
+    <div id="parent" class="hide allPagesContainer darkThemeBackground">
+        <div id="front" class="lightTheme">
+            <div id="frontHeader">
+                <div id="topVectorContainer" data-aos="fade-down">
+                    <div id="circleTheme">
+                        <img src="/images/circleLoop.gif" class="loop circleLoop" alt="circleGif">
+                    </div>
+                    <img src="/images/topVector.png" class="vector topVector poTheme" alt="topVector">
+                </div>
             </div>
-            <div id="working">
-                <div id="workingDiv">
-                    <div id="contentDiv">
-                        <h3> &#128640; تحت التطوير</h3>
+            <div id="welcoming" data-aos="fade-right">
+                <div id="welcomeText" class="welcomingChildren">
+                    <div id="app"></div>
+                </div>
+                <div id="meDiv" class="welcomingChildren">
+                    <h2 class="aboutMeFont darkThemeFont">I'm ibrahim,</h2>
+                </div>
+                <div id="shortAbout" class="welcomingChildren">
+                    <h2 class="shortAboutText aboutMeFont">FullStack Dev</h2>
+                </div>
+            </div>
+            <div id="info">
+                <div id="infoBackground">
+                    <img src="/images/infoVector.png" class="vector infoBackgroundVector" alt="inforvector">
+                </div>
+                <div id="infoCards">
+                    <div id="contact" class="infoCard" data-aos="fade-right">
+                        <div id="contactIcon" class="infoIcons">
+                            <img src="/images/email.png" class="emailIcon" alt="email">
+                        </div>
+                        <div id="contactContent" class="infoContent">
+                            <h5 class="frontFont lightThemeFont">Contact via email</h5>
+                        </div>
+                        <div id="contactButton" class="infoButtonsDiv">
+                            <button class="infoButtons" id="emailMe" aria-label="email"></button>
+                            <div class="infoButtonsText">
+
+                            </div>
+                        </div>
+                        <div id="contactVector">
+                            <img src="/images/emailVector.png" class="infoVectors" alt="emailVector">
+                        </div>
+                    </div>
+                    <div id="idea" class="infoCard">
+                        <div id="ideaIcon" class="infoIcons ideaIconLabel">
+                            <img src="/images/idea.png" class="ideaIcon" alt="idea">
+                        </div>
+                        <div id="ideaContent" class="infoContent">
+                            <h5 class="frontFont lightThemeFont">Hi there, welcome to my first personal website here where you see my coding journey</h5>
+                        </div>
+                        <div id="ideaVector">
+                            <img src="/images/ideaVector.png" class="ideaVector" alt="ideaVector">
+                        </div>
+                    </div>
+                    <div id="created" class="infoCard" data-aos="fade-left">
+                        <div id="createdIcon" class="infoIcons createdIconLabel">
+                            <img src="/images/Attention.png" class="attentionIcon" alt="attention">
+                        </div>
+                        <div id="createdContent" class="infoContent">
+                            <h5 class="frontFont lightThemeFont">This website designed and programmed by me, join me at github and let's develop cool stuff</h5>
+                        </div>
+                        <div id="createdButton" class="infoButtonsDiv">
+                            <button class="infoButtons" id="githubMe" aria-label="github"></button>
+                            <div class="infoButtonsText">
+
+                            </div>
+                        </div>
+                        <div id="createdVector">
+                            <img src="/images/emailVector.png" class="infoVectors" alt="emailVector">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="loading">
-                <div class="container">
-                    <div class="it item1"></div>
-                    <div class="it item2"></div>
-                    <div class="it item3"></div>
-                  </div>
-            </div>
-            <div id="social">
-                <div>
-                    <a href="https://github.com/ibraKH" target="__"><img src="https://ibra.ws/images/github.png" class="icons" id="githubB"></a>
-                    <a href="https://github.com/ibraKH" target="__"><img src="https://ibra.ws/images/githubW.png" class="icons" id="githubW"></a>
+            <div id="show">
+                <div id="showDiv">
+                    <h3 id="showText" class="darkThemeFont">SHOW-SHOW-SHOW-SHOW-SHOW-</h3>
+                </div>
+                <div id="showBackground">
+                    <img src="/images/showVector.png" class="showVector" alt="showVector">
                 </div>
             </div>
         </div>
+        <div id="major">
+            <div id="leftCircle" class="circle" data-aos="fade-right"></div>
+            <div id="rightCircle" class="circle" data-aos="fade-left"></div>
+            <div id="textContaier" data-aos="fade-left">
+                <h4 class="quote">Either you run the day, or the day runs you.</h4>
+            </div>
+            <div id="majorLine" data-aos="fade-up-right">
+                <div id="lines">
+                    <div id="firstLine" class="lineDarkTheme">
+
+                    </div>
+                    <div id="curvedFirstLine" class="lineDarkTheme">
+    
+                    </div>
+                    <div id="curvedFirstLineInside" class="lineDarkThemeInside">
+
+                    </div>
+                    <div id="secendLine" class="lineDarkTheme">
+    
+                    </div>
+                    <div id="curvedSecendLine" class="lineDarkTheme">
+    
+                    </div>
+                    <div id="curvedSecendLineInside" class="lineDarkThemeInside">
+    
+                    </div>
+                    <div id="lastLine" class="lineDarkTheme">
+    
+                    </div>
+                </div>
+                <div id="roads">
+                    <div id="oneToTwo" class="road roadFirstLine">
+
+                    </div>
+                    <div id="twoToThree" class="road roadFirstLine">
+    
+                    </div>
+                    <div id="threeToFourTop" class="road roadFirstLine">
+    
+                    </div>
+                    <div id="threeToFourBottom" class="road">
+    
+                    </div>
+                    <div id="threeToFourBottomB" class="road curveLine lineDarkTheme">
+    
+                    </div>
+                    <div id="threeToFourInside" class="road curveLine">
+    
+                    </div>
+                    <div id="fourToFive" class="road roadSecendLine">
+    
+                    </div>
+                    <div id="fiveToSix" class="road roadSecendLine">
+    
+                    </div>
+                    <div id="fourToFiveTop" class="road roadSecendLine lineDarkTheme">
+    
+                    </div>
+                    <div id="fiveToSixTop" class="road roadSecendLine lineDarkTheme">
+    
+                    </div>
+                </div>
+                <div id="points">
+                    <div id="firstPoint" class="point darkThemeFont">
+
+                    </div>
+                    <div id="secendPoint" class="point darkThemeFont">
+    
+                    </div>
+                    <div id="thirdPoint" class="point darkThemeFont">
+    
+                    </div>
+                    <div id="fourthPoint" class="point darkThemeFont">
+    
+                    </div>
+                    <div id="fifthPoint" class="point darkThemeFont">
+    
+                    </div>
+                    <div id="sixthPoint" class="point darkThemeFont lineDarkTheme">
+    
+                    </div>
+                    <div id="seventhPoint" class="point darkThemeFont lineDarkTheme">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="coding">
+            <div id="codingHeader">
+                <div id="majorVector" data-aos="fade-up">
+                    <img src="/images/majorVector.png" class="majorVector vector" alt="majorVector">
+                </div>
+                <div id="firstWhiteBreak" class="whiteBreak lightThemeBackground" data-aos="fade-down">
+
+                </div>
+            </div>
+            <p class="graphText">The graphs shows the percent of projects that i used with the same tech</p>
+            <div id="fullstackLabel">
+                <div id="frontend">
+                    <div id="frontendLeft" data-aos="fade-right">
+                        <div id="js" class="frontendCards">
+                            <div id="jsIcons" class="frontIcons">
+                                <img src="/images/js.png" alt="js logo" class="jsIcon" alt="js">
+                            </div>
+                            <div id="jsPrecent" class="present darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="html" class="frontendCards">
+                            <div id="htmlIcons" class="frontIcons">
+                                <img src="/images/html.png" alt="html logo" class="htmlIcon" alt="html">
+                            </div>
+                            <div id="htmlPrecent" class="darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="css" class="frontendCards">
+                            <div id="cssIcons" class="frontIcons">
+                                <img src="/images/css.png" alt="cs logo" class="cssIcon" alt="css">
+                            </div>
+                            <div id="cssPrecent" class="darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="frontendVector">
+                            <img src="/images/frontendVector.png" class="frontendVector vector" alt="frontendVector">
+                        </div>
+                    </div>
+                    <div id="frontendRight" data-aos="fade-left">
+                        <div id="frontendTitle">
+                            <h4 class="headerCodingFont darkThemeFont">FrontEnd</h4>
+                        </div>
+                        <div id="frontendContent">
+                            <p class="codingContentFont darkThemeFont">I started coding in web development through frontend first then expanded to FullStack</p>
+                        </div>
+                        <div id="frontendMore">
+                            <div>
+                                <p class="codingContentFont smallerFont darkThemeFont">Familiar with :</p>
+                            </div>
+                            <div id="frontendMoreLogos">
+                                <img src="/images/svelteLogo.png" alt="svelte">
+                                <img src="/images/reactLogo.png" alt="react">
+                                <img src="/images/vueLogo.png" class="vueLogo" alt="vue">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="backend">
+                    <div id="backendLeft" data-aos="fade-left">
+                        <div id="nodejs" class="backendCards">
+                            <div id="nodejsIcons" class="backendIcons">
+                                <img src="/images/nodejs.png" alt="nodejs logo" class="nodejsIcon" alt="nodejs">
+                            </div>
+                            <div id="nodejsPrecent" class="present darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="firebase" class="backendCards">
+                            <div id="firebaseIcons" class="backendIcons">
+                                <img src="/images/firebase.png" alt="firebase logo" class="firebaseIcon" alt="firebase">
+                            </div>
+                            <div id="firebasePrecent" class="darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="mongodb" class="backendCards">
+                            <div id="mongodbIcons" class="backendIcons">
+                                <img src="/images/mongodb.png" alt="cs logo" class="mongodbIcon" alt="mongodb">
+                            </div>
+                            <div id="mongodbPrecent" class="darkThemeFont">
+
+                            </div>
+                        </div>
+                        <div id="backendVector">
+                            <img src="/images/backendVector.png" class="backendVector vector" alt="backendVector">
+                        </div>
+                    </div>
+                    <div id="backendRight" data-aos="fade-right">
+                        <div id="backendTitle">
+                            <h4 class="headerCodingFont darkThemeFont">BackEnd</h4>
+                        </div>
+                        <div id="backendContent">
+                            <p class="codingContentFont darkThemeFont">Most of my coding time spent on backend , either web development or any project out of web , e.q. created couple of bots.</p>
+                        </div>
+                        <div id="backendMore">
+                            <div>
+                                <p class="codingContentFont smallerFont darkThemeFont">Familiar with :</p>
+                            </div>
+                            <div id="backendMoreLogos">
+                                <img src="/images/mysqlLogo.png" alt="mysql">
+                                <img src="/images/expressLogo.png" alt="express">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div id="projectsHeader">
+                <div id="projectsWhiteBreak" class="whiteBreak lightThemeBackground">
+
+                </div>
+                <div id="projectsVector" class="vector" data-aos="fade-down">
+                    <img src="/images/projectsVector.png" class="projectsVector" alt="projectsVector">
+                </div>
+            </div>
+            <div id="projectsIll">
+                <div id="projectsIllustration" data-aos="flip-right">
+                    <img src="/images/projectsill.png" class="projectsill" alt="projectsIll">
+                </div>
+                <div id="projectsTitle">
+                    <h4 class="projectsTitleFont darkThemeFont">Projects</h4>
+                </div>
+            </div>
+            <div id="projectsCards">
+                <div id="cardsBottom" data-aos="flip-down">
+
+                </div>
+                <div id="projectsCardsContainer">
+                    <div id="raceApp" class="projectsCard" data-aos="fade-up-right">
+                        <div id="raceIcon" class="projectsIcons">
+                            <img src="/images/race.png" class="projectsImages racePng" alt="race">
+                        </div>
+                        <div id="raceContent" class="projectsContent">
+                            <h3 class="projectsFont darkThemeFont">race app</h3>
+                        </div>
+                        <div id="raceButton">
+                            <button class="projectsButtons" id="raceBt" aria-label="race"></button>
+                        </div>
+                    </div>
+                    <div id="quizareaApp" class="projectsCard" data-aos="zoom-in">
+                        <div id="quizareaIcon" class="projectsIcons">
+                            <img src="/images/quizarea.png" class="projectsImages quizareaPng" alt="quizarea">
+                        </div>
+                        <div id="quizareaContent" class="projectsContent">
+                            <h3 class="projectsFont darkThemeFont">QuizArea</h3>
+                        </div>
+                        <div id="quizareaButton">
+                            <button class="projectsButtons" id="quizareaBt" aria-label="quizarea"></button>
+                        </div>
+                    </div>
+                    <div id="telegramBot" class="projectsCard" data-aos="fade-up-left">
+                        <div id="telegramBotIcon" class="projectsIcons">
+                            <img src="/images/telegramBot.png" class="projectsImages telegramBotPng" id="telegramBotLogo" alt="telegrambot">
+                        </div>
+                        <div id="telegramBotContent" class="projectsContent">
+                            <h3 class="projectsFont darkThemeFont">ibraKH bot</h3>
+                        </div>
+                        <div id="telegramBotButton">
+                            <button class="projectsButtons" id="telegramBotBt" aria-label="telegrambot"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" data-aos="fade-up">
+            <div id="socialIconsDiv">
+                <div id="twitterIconDivCard" class="socailIconsCards darkThemeBackground">
+                    <a href="https://twitter.com/IGsibra" target="__"><img src="/images/twitter.png" class="footerIcons" id="twitterImage" alt="twitter"></a>
+                </div>
+                <div id="githubIconDivCard" class="socailIconsCards darkThemeBackground">
+                    <a href="https://github.com/ibraKH" target="__"><img src="/images/github.png" id="githubIconImage" alt="github"></a>
+                </div>
+                <div id="telegramIconDivCard" class="socailIconsCards darkThemeBackground">
+                    <a href="https://t.me/CEibra" target="__"><img src="/images/telegram.png" class="footerIcons" id="telegramImage" alt="telegram"></a>
+                </div>
+            </div>
+            <div id="footerVector">
+                <img src="/images/footerVector.png" class="footerVector vector" alt="footerVector">
+            </div>
+            <div id="copyright">
+                <h6>©  ibra, All rights reserved 2022</h6>
+            </div>
+        </div>
+        <div id="watchScreen" class="bigscreen">
+
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script async>
+        // preload
+        const preload = document.getElementById("preload");
+        const parent = document.getElementById("parent");
+
+        const showTextPreload = document.getElementById("showTextPreload");
+        showTextPreload.innerHTML = showTextPreload.textContent.replace(/\S/g, "<span class='preload spanen'>$&</span>");
+        const elementPreload = [...document.getElementsByClassName("preload")];
+        elementPreload.forEach((x, i) => {
+            x.style.transform = "rotate("+i*14.5+"deg)"
+        })
+    </script>
+    <script src="/scripts/serverworker.js"></script>
+    <script src="/scripts/sw.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+    "name": "ibra portfolio",
+    "short_name": "ibra",
+    "start_url": ".",
+    "background_color": "#0E0E0E",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/images/ibra.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ]
+}
