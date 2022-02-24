@@ -1,20 +1,37 @@
 // change the theme
 AOS.init();
+window.addEventListener("load", () => {
+    preload.style.display = "none";
+    parent.classList.remove("hide");
+
+
+})
 const showText = document.getElementById("showText");
 showText.innerHTML = showText.textContent.replace(/\S/g, "<span class='spanen showTextLoaded'>$&</span>");
 const element = [...document.getElementsByClassName("showTextLoaded")];
 element.forEach((x, i) => {
     x.style.transform = "rotate("+i*14.5+"deg)"
 })
-let theme = localStorage.getItem("theme");
-if(theme == null){
-    theme = "dark";
-    localStorage.setItem("theme", theme);
-}
-if(theme == "white"){
-    
-}
-document.getElementById("circleTheme").addEventListener("click", () => {
+const themeImages = [...document.getElementsByClassName("themeImages")];
+const darkThemeImages = ["/images/darkTheme/emailVector.png",
+"/images/darkTheme/ideaVector.png",
+"/images/darkTheme/emailVector.png",
+"/images/darkTheme/frontendVector.png",
+"/images/darkTheme/backendVector.png",
+"/images/darkTheme/twitter.png",
+"/images/darkTheme/github.png",
+"/images/darkTheme/telegram.png"];
+
+
+const lightThemeImages = ["/images/lightTheme/emailVectorLight.png",
+"/images/lightTheme/ideaVectorLight.png",
+"/images/lightTheme/emailVectorLight.png",
+"/images/lightTheme/frontendVectorPng.png",
+"/images/lightTheme/backendVectorLight.png",
+"/images/lightTheme/twitterLight.png",
+"/images/lightTheme/githubLight.png",
+"/images/lightTheme/telegramLight.png"];
+function onLoadWhiteTheme(){
     const darkThemeBackground = [...document.getElementsByClassName("darkThemeBackground")];
     const lightThemeBackground = [...document.getElementsByClassName("lightThemeBackground")];
     const darkThemeFont = [...document.getElementsByClassName("darkThemeFont")];
@@ -23,6 +40,8 @@ document.getElementById("circleTheme").addEventListener("click", () => {
     const lineLightTheme = [...document.getElementsByClassName("lineLightTheme")];
     const lineDarkThemeInside = [...document.getElementsByClassName("lineDarkThemeInside")];
     const lineLightThemeInside = [...document.getElementsByClassName("lineLightThemeInside")];
+    const infoCardDark = [...document.getElementsByClassName("infoCardDark")];
+    const infoCardLight = [...document.getElementsByClassName("infoCardLight")];
 
     darkThemeBackground.map((x) => {
         x.classList.remove("darkThemeBackground")
@@ -64,23 +83,129 @@ document.getElementById("circleTheme").addEventListener("click", () => {
         x.classList.add("lineDarkThemeInside")
         return
     })
+    infoCardDark.map((x) => {
+        x.classList.remove("infoCardDark")
+        x.classList.add("infoCardLight")
+        return
+    })
+    infoCardLight.map((x) => {
+        x.classList.remove("infoCardLight")
+        x.classList.add("infoCardDark")
+        return
+    })
+    themeImages.map((x,i) => {
+        x.src = [lightThemeImages[i]];
+    })
+    return
+}
+let theme = localStorage.getItem("theme");
+if(theme == null){
+    theme = "dark";
+    localStorage.setItem("theme", theme);
+}
+if(theme == "light"){
+    onLoadWhiteTheme();
+}
+
+
+document.getElementById("circleTheme").addEventListener("click", () => {
+    parent.classList.add("hide");
+    preload.style.display = "block";
+    
+    const setTimer = setInterval(() => {
+        parent.classList.remove("hide");
+        preload.style.display = "none";
+        clearInterval(setTimer)
+    }, 1800)
+    return switchThemes();
+})
+function switchThemes(){
+    const darkThemeBackground = [...document.getElementsByClassName("darkThemeBackground")];
+    const lightThemeBackground = [...document.getElementsByClassName("lightThemeBackground")];
+    const darkThemeFont = [...document.getElementsByClassName("darkThemeFont")];
+    const lightThemeFont = [...document.getElementsByClassName("lightThemeFont")];
+    const lineDarkTheme = [...document.getElementsByClassName("lineDarkTheme")];
+    const lineLightTheme = [...document.getElementsByClassName("lineLightTheme")];
+    const lineDarkThemeInside = [...document.getElementsByClassName("lineDarkThemeInside")];
+    const lineLightThemeInside = [...document.getElementsByClassName("lineLightThemeInside")];
+    const infoCardDark = [...document.getElementsByClassName("infoCardDark")];
+    const infoCardLight = [...document.getElementsByClassName("infoCardLight")];
+
+    darkThemeBackground.map((x) => {
+        x.classList.remove("darkThemeBackground")
+        x.classList.add("lightThemeBackground")
+        return
+    })
+    lightThemeBackground.map((x) => {
+        x.classList.remove("lightThemeBackground")
+        x.classList.add("darkThemeBackground")
+        return
+    })
+    darkThemeFont.map((x) => {
+        x.classList.remove("darkThemeFont")
+        x.classList.add("lightThemeFont")
+        return
+    })
+    lightThemeFont.map((x) => {
+        x.classList.remove("lightThemeFont")
+        x.classList.add("darkThemeFont")
+        return
+    })
+    lineDarkTheme.map((x) => {
+        x.classList.remove("lineDarkTheme")
+        x.classList.add("lineLightTheme")
+        return
+    })
+    lineLightTheme.map((x) => {
+        x.classList.remove("lineLightTheme")
+        x.classList.add("lineDarkTheme")
+        return
+    })
+    lineDarkThemeInside.map((x) => {
+        x.classList.remove("lineDarkThemeInside")
+        x.classList.add("lineLightThemeInside")
+        return
+    })
+    lineLightThemeInside.map((x) => {
+        x.classList.remove("lineLightThemeInside")
+        x.classList.add("lineDarkThemeInside")
+        return
+    })
+    infoCardDark.map((x) => {
+        x.classList.remove("infoCardDark")
+        x.classList.add("infoCardLight")
+        return
+    })
+    infoCardLight.map((x) => {
+        x.classList.remove("infoCardLight")
+        x.classList.add("infoCardDark")
+        return
+    })
+
     theme = localStorage.getItem("theme");
     if(theme == "dark"){
-        theme = "light"
-        return localStorage.setItem("theme", theme);
+        return toWhiteTheme();
     }
     if(theme == "light"){
-        theme = "dark"
-        return localStorage.setItem("theme", theme);
+        return toDarkTheme();
     }
-    
-})
-window.addEventListener("load", () => {
-    preload.style.display = "none";
-    parent.classList.remove("hide");
-
-
-})
+}
+function toWhiteTheme(){
+    themeImages.map((x,i) => {
+        x.src = [lightThemeImages[i]];
+    })
+    theme = "light"
+    localStorage.setItem("theme", theme);
+    return  
+}
+function toDarkTheme(){
+    themeImages.map((x,i) => {
+        x.src = [darkThemeImages[i]];
+    })
+    theme = "dark"
+    localStorage.setItem("theme", theme);
+    return
+}
 // listen to links
 document.getElementById("raceBt").addEventListener("click", () => {
     window.open("https://twitter.com/IGsibra/status/1456021539904790530?s=20&t=fK7std9Vct2DEFtBNBjmwQ", '_blank')
@@ -116,10 +241,8 @@ let bodyRect = document.body.getBoundingClientRect(),
 elemRect = roadFirstLine[0].getBoundingClientRect(),
 offset   = elemRect.top - bodyRect.top;
 const points = document.getElementsByClassName("point");
-console.log(roadSecendLine[0]);
 window.addEventListener("scroll" , async (e) => {
     if(window.pageYOffset < 350 || window.pageYOffset > 1100){
-        console.log(window.pageYOffset);
         roadFirstLine[0].classList.remove("colored");
         points[1].classList.remove("pointsColored");
         roadFirstLine[1].classList.remove("colored");
