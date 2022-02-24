@@ -414,7 +414,7 @@ html, body{
     left: 59%;
 }
 #thirdPoint::after{
-    content: "Studying EN aboard";
+    content: "Studied EN aboard";
     text-align: center;
     font-size: x-small;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -435,7 +435,7 @@ html, body{
     left: 71%;
 }
 #fourthPoint::after{
-    content: "Start Coding";
+    content: "Started Coding";
     text-align: center;
     font-size: small;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -458,9 +458,9 @@ html, body{
     left: 51%;
 }
 #fifthPoint::after{
-    content: "College";
+    content: "CE student at TU";
     text-align: center;
-    font-size: small;
+    font-size: 12px;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     position: absolute;
     width: 50px;
@@ -1516,10 +1516,11 @@ html, body{
 #secendPoint::after{
     content: "High school";
     font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: small;
     text-align: center;
     position: absolute;
     top: 10px;
-    left: -13px;
+    left: -8.5px;
 }
 #secendPoint::before{
     content: "2018";
@@ -1533,7 +1534,7 @@ html, body{
     left: 59%;
 }
 #thirdPoint::after{
-    content: "Studying EN aboard";
+    content: "Studied EN aboard";
     text-align: center;
     font-size: x-small;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -1554,7 +1555,7 @@ html, body{
     left: 71%;
 }
 #fourthPoint::after{
-    content: "Start Coding";
+    content: "Started Coding";
     text-align: center;
     font-size: small;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -1577,9 +1578,9 @@ html, body{
     left: 51%;
 }
 #fifthPoint::after{
-    content: "College";
+    content: "CE student at TU";
     text-align: center;
-    font-size: small;
+    font-size: 12px;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     position: absolute;
     width: 50px;
