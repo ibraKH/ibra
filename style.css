@@ -93,6 +93,10 @@ html, body{
     width: 100%;
     overflow-x: hidden;
 }
+.frontFont{
+    font-family: 'Comfortaa', cursive;
+    font-size: 8px;
+}
 .bigscreen{
     display: none;
 }
@@ -1194,6 +1198,10 @@ html, body{
     height: 2750px;
     width: 100%;
     overflow-x: hidden;
+}
+.frontFont{
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
 }
 #watchScreen{
     position: absolute;
@@ -2359,10 +2367,7 @@ button, a{
 .aboutMeFont{
     font-family: 'Changa', sans-serif;
 }
-.frontFont{
-    font-family: 'Comfortaa', cursive;
-    font-size: x-small;
-}
+
 .headerCodingFont{
     font-family: 'El Messiri', sans-serif;
 }
