@@ -1,11 +1,10 @@
 // change the theme
 AOS.init();
-window.addEventListener("load", () => {
+const preloadTimer = setInterval(() => {
     preload.style.display = "none";
     parent.classList.remove("hide");
-
-
-})
+    clearInterval(preloadTimer);
+}, 1800)
 const showText = document.getElementById("showText");
 showText.innerHTML = showText.textContent.replace(/\S/g, "<span class='spanen showTextLoaded'>$&</span>");
 const element = [...document.getElementsByClassName("showTextLoaded")];
